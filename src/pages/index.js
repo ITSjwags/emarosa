@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import Poster from '../images/poster.jpg';
 
 const Content = styled.div`
   position: relative;
@@ -25,6 +24,19 @@ const Video = styled.div`
   }
 `;
 
+const Preorder = styled.a`
+  background: white;
+  border-radius: 30px;
+  color: #AA405C;
+  display: inline-block;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 15px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+`;
+
 const IndexPage = () => (
   <Layout>
     <Content>
@@ -33,13 +45,16 @@ const IndexPage = () => (
           width="560"
           height="315"
           title="peach club video"
-          poster={Poster}
-          src="https://www.youtube.com/embed/Rk_sAHh9s08"
+          src="https://www.youtube.com/embed/Rk_sAHh9s08?modestbranding=1"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         />
       </Video>
+
+      <Preorder href="#">
+        Pre-Order Album
+      </Preorder>
     </Content>
   </Layout>
 );

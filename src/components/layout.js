@@ -31,20 +31,9 @@ const BackgroundContainer = styled.div`
   width: 100vw;
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 100vh;
-  width: 100%;
-`;
-
 const Content = styled.main`
-  display: flex;
-  align-items: center;
-  flex: 1;
-  padding: 0 20px 80px 20px;
-  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
 `;
 
 const Layout = ({ children }) => (
@@ -76,13 +65,11 @@ const Layout = ({ children }) => (
           <Background />
         </BackgroundContainer>
 
-        <Wrapper>
-          <Header />
+        <Header />
 
-          <Content>
-            {children}
-          </Content>
-        </Wrapper>
+        <Content>
+          {children}
+        </Content>
       </>
     )}
   />
