@@ -4,8 +4,7 @@ import Helmet from 'react-helmet';
 import styled, { createGlobalStyle } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { Normalize } from 'styled-normalize';
-import Background from './background';
-import Header from './header';
+import LogoSrc from '../images/logo.svg';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -22,21 +21,22 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const BackgroundContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  min-height: 100vh;
-  width: 100vw;
-`;
-
 const Content = styled.main`
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   padding: 80px 20px;
   text-align: center;
 `;
 
-const Layout = ({ children }) => (
+const Logo = styled.img`
+  max-width: 250px;
+`;
+
+const Layout = () => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -61,14 +61,9 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
 
-        <BackgroundContainer>
-          <Background />
-        </BackgroundContainer>
-
-        <Header />
-
         <Content>
-          {children}
+          <Logo src={LogoSrc} alt="Emarosa" />
+          <p>Thursday...</p>
         </Content>
       </>
     )}
