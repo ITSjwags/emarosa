@@ -63,7 +63,7 @@ const Layout = () => (
 
         <Content>
           <Logo src={LogoSrc} alt="Emarosa" />
-          <p>Thursday...</p>
+          <p>11•15•18</p>
         </Content>
       </>
     )}
