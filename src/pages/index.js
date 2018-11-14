@@ -52,7 +52,7 @@ const IndexPage = () => (
         />
       </Video>
 
-      <Preorder href="#">
+      <Preorder href="http://smarturl.it/emarosamerch" target="_blank">
         Pre-Order Album
       </Preorder>
     </Content>
