@@ -40,6 +40,7 @@ const Logo = styled.img`
 
 class Layout extends Component {
   componentDidMount() {
+    this.getHeight();
     window.addEventListener('resize', debounce(this.getHeight, 200));
   }
 
