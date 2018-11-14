@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import styled, { createGlobalStyle } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Normalize } from 'styled-normalize';
+import debounce from 'lodash.debounce';
 import LogoSrc from '../images/logo.svg';
 
 const GlobalStyle = createGlobalStyle`
@@ -39,10 +40,16 @@ const Logo = styled.img`
 
 class Layout extends Component {
   componentDidMount() {
+    window.addEventListener('resize', debounce(this.getHeight, 200));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.getHeight);
+  }
+
+  getHeight = () => {
     // make sure height is 100vh even in mobile safari
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
+    const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
 
