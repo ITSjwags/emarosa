@@ -28,6 +28,7 @@ const Content = styled.main`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 80px 20px;
   text-align: center;
 `;
@@ -35,6 +36,12 @@ const Content = styled.main`
 const Logo = styled.img`
   max-width: 250px;
 `;
+
+// make sure height is 100vh even in mobile safari
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const Layout = () => (
   <StaticQuery
