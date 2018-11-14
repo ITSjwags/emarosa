@@ -37,15 +37,16 @@ const Logo = styled.img`
   max-width: 250px;
 `;
 
-// make sure height is 100vh even in mobile safari
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+const Layout = () => {
+  // make sure height is 100vh even in mobile safari
+  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+  let vh = window.innerHeight * 0.01;
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-const Layout = () => (
-  <StaticQuery
-    query={graphql`
+  return (
+    <StaticQuery
+      query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
@@ -54,28 +55,29 @@ const Layout = () => (
         }
       }
     `}
-    render={data => (
-      <>
-        <Normalize />
-        <GlobalStyle />
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Emarosa' },
-            { name: 'keywords', content: 'emarosa, peach club, band, music, rock, pop' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
+      render={data => (
+        <>
+          <Normalize />
+          <GlobalStyle />
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: 'Emarosa' },
+              { name: 'keywords', content: 'emarosa, peach club, band, music, rock, pop' },
+            ]}
+          >
+            <html lang="en" />
+          </Helmet>
 
-        <Content>
-          <Logo src={LogoSrc} alt="Emarosa" />
-          <p>11•15•18</p>
-        </Content>
-      </>
-    )}
-  />
-);
+          <Content>
+            <Logo src={LogoSrc} alt="Emarosa" />
+            <p>11•15•18</p>
+          </Content>
+        </>
+      )}
+    />
+  );
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
