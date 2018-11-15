@@ -67,7 +67,7 @@ class Layout extends Component {
   getHeight = () => {
     // make sure height is 100vh even in mobile safari
     const vh = window.innerHeight * 0.01;
-    const minHeight = (this.header.current.clientHeight + this.content.current.children[0].clientHeight + 20) * 0.01;
+    const minHeight = (this.header.current.clientHeight + this.content.current.children[0].clientHeight + 40) * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     document.documentElement.style.setProperty('--minHeight', `${minHeight}px`);
   }
