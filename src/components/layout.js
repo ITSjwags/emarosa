@@ -32,7 +32,7 @@ const BackgroundContainer = styled.div`
 `;
 
 const Content = styled.main`
-  padding: 80px 20px;
+  padding: 0 20px 40px 0;
   text-align: center;
 `;
 
