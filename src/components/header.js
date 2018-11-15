@@ -2,14 +2,16 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Logo from '../images/logo.svg';
-import IconFB from '../images/icon-fb.svg';
-import IconTW from '../images/icon-tw.svg';
-import IconIG from '../images/icon-ig.svg';
+import FB from '../images/icon-fb';
+import TW from '../images/icon-tw';
+import IG from '../images/icon-ig';
 
 const StyledHeader = styled.header`
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   justify-content: space-between;
+  margin: 0 auto;
   padding: 20px 20px 20px 10px;
   position: relative;
   width: 100%;
@@ -34,10 +36,20 @@ const Socials = styled.div`
 `;
 
 const SocialLink = styled.a`
+  color: white;
   display: block;
   margin-left: 10px;
+  transition: all 250ms ease;
   width: 20%;
   max-width: 35px;
+
+  > svg * {
+    fill: currentColor;
+  }
+
+  &:hover {
+    color: #ca4766;
+  }
 `;
 
 const Header = () => (
@@ -46,9 +58,9 @@ const Header = () => (
       <img src={Logo} alt="emarosa" />
     </StyledLink>
     <Socials>
-      <SocialLink href="https://www.facebook.com/emarosa" target="_blank"><img src={IconFB} alt="facebook" /></SocialLink>
-      <SocialLink href="https://www.twitter.com/emarosa" target="_blank"><img src={IconTW} alt="twitter" /></SocialLink>
-      <SocialLink href="https://www.instagram.com/emarosa" target="_blank"><img src={IconIG} alt="instagram" /></SocialLink>
+      <SocialLink href="https://www.facebook.com/emarosa" target="_blank"><FB /></SocialLink>
+      <SocialLink href="https://www.twitter.com/emarosa" target="_blank"><TW /></SocialLink>
+      <SocialLink href="https://www.instagram.com/emarosa" target="_blank"><IG /></SocialLink>
     </Socials>
   </StyledHeader>
 );
