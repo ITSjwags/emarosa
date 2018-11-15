@@ -51,8 +51,8 @@ const SocialLink = styled.a`
   }
 `;
 
-const Header = () => (
-  <StyledHeader>
+const Header = React.forwardRef((props, ref) => (
+  <StyledHeader ref={ref}>
     <StyledLink to="/">
       <img src={Logo} alt="emarosa" />
     </StyledLink>
@@ -62,6 +62,6 @@ const Header = () => (
       <SocialLink href="https://www.instagram.com/emarosa" target="_blank"><IG /></SocialLink>
     </Socials>
   </StyledHeader>
-);
+));
 
 export default Header;
