@@ -10,8 +10,12 @@ import Header from './header';
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
-    height: 100%;
+
+    @media(max-width: 640px) {
+      height: 100%;
+    }
   }
+
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -19,13 +23,19 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
-    height: 100%;
     position: relative;
+
+    @media(max-width: 640px) {
+      height: 100%;
+      overflow: hidden;
+    }
   }
 
   #___gatsby,
-  #___gatsby > div{
-    height: 100%;
+  #___gatsby > div {
+    @media(max-width: 640px) {
+      height: 100%;
+    }
   }
 `;
 
@@ -34,13 +44,14 @@ const BackgroundContainer = styled.div`
   top: 0;
   left: 0;
   height: 100%;
+  min-height: 100vh;
   width: 100vw;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 `;
 
 const Content = styled.main`
@@ -48,6 +59,7 @@ const Content = styled.main`
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  flex-shrink: 0;
   padding: 0 20px 40px 20px;
   text-align: center;
 `;

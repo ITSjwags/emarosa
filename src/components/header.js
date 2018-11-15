@@ -9,6 +9,7 @@ import IG from '../images/icon-ig';
 const StyledHeader = styled.header`
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   justify-content: space-between;
   margin: 0 auto;
   padding: 20px 20px 20px 10px;
