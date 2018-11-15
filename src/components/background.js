@@ -15,7 +15,7 @@ const Background = () => (
         }
       }
     `}
-    render={data => <Img style={{ height: '100%', minHeight: '100vh' }} fluid={data.backgroundImage.childImageSharp.fluid} />}
+    render={data => <Img style={{ height: '100%' }} fluid={data.backgroundImage.childImageSharp.fluid} />}
   />
 );
 export default Background;

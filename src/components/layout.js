@@ -10,6 +10,7 @@ import Header from './header';
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
+    height: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -18,7 +19,13 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
+    height: 100%;
     position: relative;
+  }
+
+  #___gatsby,
+  #___gatsby > div{
+    height: 100%;
   }
 `;
 
@@ -27,14 +34,13 @@ const BackgroundContainer = styled.div`
   top: 0;
   left: 0;
   height: 100%;
-  min-height: 100vh;
   width: 100vw;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
 `;
 
 const Content = styled.main`
