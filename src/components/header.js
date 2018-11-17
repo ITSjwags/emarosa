@@ -5,6 +5,7 @@ import Logo from '../images/logo.svg';
 import FB from '../images/icon-fb';
 import TW from '../images/icon-tw';
 import IG from '../images/icon-ig';
+import Globe from '../images/icon-globe';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -61,6 +62,7 @@ const Header = () => (
       <SocialLink href="https://www.facebook.com/emarosa" target="_blank"><FB /></SocialLink>
       <SocialLink href="https://www.twitter.com/emarosa" target="_blank"><TW /></SocialLink>
       <SocialLink href="https://www.instagram.com/emarosa" target="_blank"><IG /></SocialLink>
+      <SocialLink href="https://bnds.us/s40iem" target="_blank"><Globe /></SocialLink>
     </Socials>
   </StyledHeader>
 );
