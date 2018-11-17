@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Globe = ({ color }) => (
-	<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-9 -9 48 48" enableBackground="new -9 -9 48 48">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-9 -9 48 48" enableBackground="new -9 -9 48 48">
 		<g>
 			<g>
 				<path fill={color} d="M15,0C9,0,3.6,3.6,1.2,9.1L1,9.2l0.1,0.2C-2,17,1.7,25.8,9.4,28.9c1.8,0.7,3.7,1.1,5.6,1.1

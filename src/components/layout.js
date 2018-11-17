@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
+    font-display: auto;
     position: relative;
 
     @media(max-width: 640px) {
