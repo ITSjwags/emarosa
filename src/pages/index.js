@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 
 const Content = styled.div`
-  position: relative;
   margin: 0 auto;
+  position: relative;
   width: 100%;
 `;
 
