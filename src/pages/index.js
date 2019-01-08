@@ -6,7 +6,18 @@ const Content = styled.div`
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 960px;
+`;
+
+const Videos = styled.div`
+  display: grid;
+  grid-gap: 40px;
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+
+  @media(min-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: initial;
+  }
 `;
 
 const Video = styled.div`
@@ -14,6 +25,8 @@ const Video = styled.div`
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
+  width: 100%;
+  /* max-width: 560px; */
 
   > iframe {
     position: absolute;
@@ -48,17 +61,30 @@ const Preorder = styled.a`
 const IndexPage = () => (
   <Layout>
     <Content>
-      <Video>
-        <iframe
-          width="560"
-          height="315"
-          title="peach club video"
-          src="https://www.youtube.com/embed/Shmt5YnF40A?modestbranding=1"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </Video>
+      <Videos>
+        <Video>
+          <iframe
+            width="560"
+            height="315"
+            title="peach club - givin up video"
+            src="https://www.youtube.com/embed/Shmt5YnF40A?modestbranding=1"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Video>
+        <Video>
+          <iframe
+            width="560"
+            height="315"
+            title="131 - cloud 9 video"
+            src="https://www.youtube.com/embed/aaH3ud1utB0?modestbranding=1"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Video>
+      </Videos>
 
       <Preorder href="http://smarturl.it/emarosamerch" target="_blank">
         Pre-Order Album

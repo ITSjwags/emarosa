@@ -10,10 +10,6 @@ import Header from './header';
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
-
-    @media(max-width: 640px) {
-      height: 100%;
-    }
   }
 
   *, *:before, *:after {
@@ -25,18 +21,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto Condensed', sans-serif;
     font-display: auto;
     position: relative;
-
-    @media(max-width: 640px) {
-      height: 100%;
-      overflow: hidden;
-    }
-  }
-
-  #___gatsby,
-  #___gatsby > div {
-    @media(max-width: 640px) {
-      height: 100%;
-    }
   }
 `;
 
@@ -56,12 +40,7 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  flex-shrink: 0;
-  padding: 0 20px 40px 20px;
+  padding: 0 0 40px 0;
   text-align: center;
 `;
 
