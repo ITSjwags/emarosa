@@ -36,7 +36,7 @@ const Video = styled.div`
   }
 `;
 
-const Preorder = styled.a`
+const Link = styled.a`
   background: white;
   border-radius: 30px;
   border: 2px solid white;
@@ -85,9 +85,9 @@ const IndexPage = () => (
         </Video>
       </Videos>
 
-      <Preorder href="http://smarturl.it/emarosamerch" target="_blank">
-        Pre-Order Album
-      </Preorder>
+      <Link href="http://smarturl.it/emarosamerch" target="_blank">
+        Shop Merch
+      </Link>
     </Content>
   </Layout>
 );
