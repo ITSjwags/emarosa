@@ -75,7 +75,6 @@ const Layout = ({ children }) => (
 
         <Wrapper>
           <Header />
-
           <Content>
             {children}
           </Content>
