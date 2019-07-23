@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
+import Poster from '../components/poster';
 
 import posterSrc from '../images/tour-poster-web.jpg';
 
@@ -15,7 +16,9 @@ const IndexPage = () => (
       />
     </Helmet>
     <Content>
-      <img src={posterSrc} alt="Emarosa Peach Club Tour" />
+      <PosterContainer>
+        <Poster />
+      </PosterContainer>
       <a
         className="bit-widget-initializer"
         data-artist-name="Emarosa"
@@ -44,12 +47,10 @@ const Content = styled.div`
   position: relative;
   width: 100%;
   max-width: 960px;
+`;
 
-  > img {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-  }
+const PosterContainer = styled.div`
+  margin-bottom: 10px;
 `;
 
 export default IndexPage;
