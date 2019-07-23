@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 import Poster from '../components/poster';
 
-import posterSrc from '../images/tour-poster-web.jpg';
-
 const IndexPage = () => (
   <Layout>
     <Helmet>
