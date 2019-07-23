@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Layout from '../components/layout';
 
-import posterSrc from '../images/tour-poster-web2.jpg';
+import posterSrc from '../images/tour-poster-web.jpg';
 
 const IndexPage = () => (
   <Layout>
