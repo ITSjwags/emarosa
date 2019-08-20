@@ -32,7 +32,7 @@ const IndexPage = () => (
         data-display-lineup="true"
         data-display-play-my-city="true"
         data-separator-color="rgba(124,124,124,0.25)"
-        href="#asf"
+        href="#tour"
       >
         &nbsp;
       </a>
