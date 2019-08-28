@@ -6,7 +6,7 @@ const Poster = () => (
   <StaticQuery
     query={graphql`
       query {
-        backgroundImage: file(relativePath: { eq: "tour-poster-web-v2.jpg" }) {
+        backgroundImage: file(relativePath: { eq: "tour-poster-web-v3.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
