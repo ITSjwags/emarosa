@@ -26,7 +26,7 @@ const IndexPage = () => (
         data-text-color="#FFFFFF"
         data-link-color="#E63167"
         data-background-color="rgba(0,0,0,0)"
-        data-display-limit="15"
+        data-display-limit=""
         data-display-start-time="true"
         data-link-text-color="#FFFFFF"
         data-display-lineup="true"
