@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
-import Logo from '../components/Logo';
+import Logo from '../components/logo';
 
 const IndexPage = () => (
   <Layout>
