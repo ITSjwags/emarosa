@@ -2,14 +2,14 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const Poster = () => (
+const Logo = () => (
   <StaticQuery
     query={graphql`
       query {
-        backgroundImage: file(relativePath: { eq: "tour-poster-web-v8.jpg" }) {
+        backgroundImage: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -23,4 +23,4 @@ const Poster = () => (
     )}
   />
 );
-export default Poster;
+export default Logo;
