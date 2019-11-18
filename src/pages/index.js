@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
+import Logo from '../components/Logo';
 
 const IndexPage = () => (
   <Layout>
@@ -13,15 +14,9 @@ const IndexPage = () => (
       />
     </Helmet>
     <Content>
-      <iframe
-        src="https://www.toneden.io/emarosaband/post/emarosa-ready-to-love?embed=true"
-        title="ready to love"
-        allowFullScreen
-        style={{ borderRadius: '3px', width: '100%', maxWidth: '400px' }}
-        frameBorder="0"
-        height="605"
-        width="400"
-      />
+      <LogoContainer>
+        <Logo />
+      </LogoContainer>
       <a
         className="bit-widget-initializer"
         data-artist-name="Emarosa"
@@ -50,6 +45,10 @@ const Content = styled.div`
   position: relative;
   width: 100%;
   max-width: 960px;
+`;
+
+const LogoContainer = styled.div`
+  margin: 20px 10px;
 `;
 
 export default IndexPage;
