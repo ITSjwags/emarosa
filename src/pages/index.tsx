@@ -47,9 +47,9 @@ export default function IndexPage() {
         <script src="https://widget.bandsintown.com/main.min.js" />
       </Helmet>
       <Content>
-        <LogoContainer>
+        <HeroContainer>
           <Hero />
-        </LogoContainer>
+        </HeroContainer>
         <a
           className="bit-widget-initializer"
           data-artist-name="Emarosa"
@@ -108,15 +108,15 @@ const Content = styled.div`
   }
 `;
 
-const LogoContainer = styled.div`
-  margin: 20px 10px;
+const HeroContainer = styled.div`
+  margin: 20px 10px 60px;
 `;
 
 const Socials = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  padding: 20px;
+  padding: 40px 20px 20px;
   gap: 20px;
 `;
 
