@@ -90,7 +90,7 @@ const Content = styled.div`
   margin: 0 auto;
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 768px;
 
   & .bit-widget {
     font-size: 22px;
