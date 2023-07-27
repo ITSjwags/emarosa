@@ -46,10 +46,12 @@ export default function IndexPage() {
       <Helmet>
         <script src="https://widget.bandsintown.com/main.min.js" />
       </Helmet>
+
+      <HeroContainer>
+        <Hero />
+      </HeroContainer>
+
       <Content>
-        <HeroContainer>
-          <Hero />
-        </HeroContainer>
         <a
           className="bit-widget-initializer"
           data-artist-name="Emarosa"
@@ -85,12 +87,17 @@ export default function IndexPage() {
   );
 }
 
+const HeroContainer = styled.div`
+  margin-inline: auto;
+  margin-bottom: 20px;
+`;
+
 const Content = styled.div`
   padding-bottom: 20px;
   margin: 0 auto;
   position: relative;
   width: 100%;
-  max-width: 768px;
+  max-width: 960px;
 
   & .bit-widget {
     font-size: 22px;
@@ -99,6 +106,10 @@ const Content = styled.div`
     .bit-event-list-title {
       font-size: 18px;
     }
+
+    .bit-top-track-button {
+      margin-bottom: 20px;
+    }
   }
 
   & .bit-details {
@@ -106,10 +117,6 @@ const Content = styled.div`
     flex-direction: column;
     gap: 10px;
   }
-`;
-
-const HeroContainer = styled.div`
-  margin: 20px 10px 60px;
 `;
 
 const Socials = styled.div`

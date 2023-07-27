@@ -5,9 +5,9 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 export default function Hero() {
   const data = useStaticQuery(graphql`
     {
-      backgroundImage: file(relativePath: { eq: "hero-extended-cropped.png" }) {
+      backgroundImage: file(relativePath: { eq: "hero.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
         }
       }
     }
@@ -17,7 +17,6 @@ export default function Hero() {
     <GatsbyImage
       alt="Emarosa hero image"
       image={data.backgroundImage.childImageSharp.gatsbyImageData}
-      style={{ height: '100%' }}
     />
   );
 }
