@@ -52,7 +52,7 @@ export default function IndexPage() {
       </HeroContainer>
 
       <Content>
-        <a
+        <div
           className="bit-widget-initializer"
           data-artist-name="Emarosa"
           data-auto-style="false"
@@ -68,10 +68,7 @@ export default function IndexPage() {
           data-link-text-color="black"
           data-separator-color="#BA342C"
           data-text-color="#FFFFFF"
-          href="#tour"
-        >
-          &nbsp;
-        </a>
+        />
 
         <Socials>
           {socialLinks.map((social, index) => {
@@ -87,12 +84,12 @@ export default function IndexPage() {
   );
 }
 
-const HeroContainer = styled.div`
+const HeroContainer = styled.section`
   margin-inline: auto;
   margin-bottom: 20px;
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   padding-bottom: 20px;
   margin: 0 auto;
   position: relative;
