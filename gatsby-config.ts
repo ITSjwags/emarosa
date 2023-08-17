@@ -20,6 +20,12 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: 'gatsby-plugin-facebook-pixel',
+      options: {
+        pixelId: '805228757810333',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'emarosa',
