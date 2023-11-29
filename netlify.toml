@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/*"
+  from = "*"
   to = "https://emarosa.komi.io/"
   status = 302
