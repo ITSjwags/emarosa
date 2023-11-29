@@ -2,3 +2,4 @@
   from = "*"
   to = "https://emarosa.komi.io/"
   status = 302
+  force = true
