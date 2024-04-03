@@ -39,7 +39,7 @@ export default function IndexPage() {
     },
     {
       icon: FaTiktok,
-      url: 'http://www.tiktok.com/emarosaband',
+      url: 'https://www.tiktok.com/@emarosaband',
     },
     {
       icon: FaYoutube,
