@@ -32,9 +32,9 @@ const config: GatsbyConfig = {
         short_name: 'emarosa',
         start_url: '/',
         background_color: '#000000',
-        theme_color: '#663399',
+        theme_color: '#FFFFFF',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sharp',
