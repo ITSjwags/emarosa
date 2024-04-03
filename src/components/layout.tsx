@@ -51,7 +51,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: black;
+    background: #121212;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
     font-display: auto;
